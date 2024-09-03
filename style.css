@@ -1,0 +1,30 @@
+body{
+    background-color: #130f40;
+}
+
+.content{
+    background-color: #30336b;
+}
+
+.btnadd{
+    background-color: #2ecc71;
+}
+
+.btnupdate{
+    background-color: #f39c12;
+}
+
+.btndelete{
+    background-color: #c0392b;
+}
+
+.btnsearch{
+    background-color: #2980b9;
+}
+.btnclear{
+    background-color: #fdcb6e;
+}
+
+/* .maincontent{
+    height: 300px;
+} */

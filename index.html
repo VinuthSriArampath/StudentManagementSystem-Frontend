@@ -30,18 +30,16 @@
                 <div class="row g-3 mb-3">
                     <div class="col">
                         <label for="txtaddfname" class="form-label text-white">First Name</label>
-                        <input type="text" class="form-control" placeholder="First name" aria-label="First name" id="txtaddfname">
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                            id="txtaddfname">
                     </div>
                     <div class="col">
                         <label for="txtaddlname" class="form-label text-white">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" id="txtaddlname">
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                            id="txtaddlname">
                     </div>
                 </div>
                 <div class="row g-3 mb-3">
-                    <div class="col-sm-7">
-                        <label for="txtaddemail" class="form-label text-white">Email</label>
-                        <input type="email" class="form-control" placeholder="Email" aria-label="Email" id="txtaddemail">
-                    </div>
                     <div class="col-sm">
                         <label for="txtaddage" class="form-label text-white">Age</label>
                         <input type="number" class="form-control" placeholder="Age" aria-label="State" id="txtaddage">
@@ -50,11 +48,17 @@
                         <label for="txtaddgrade" class="form-label text-white">Grade</label>
                         <input type="number" class="form-control" placeholder="Grade" aria-label="Zip" id="txtaddgrade">
                     </div>
+                    <div class="col-sm-7">
+                        <label for="txtaddemail" class="form-label text-white">Email</label>
+                        <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                            id="txtaddemail">
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm mb-3">
                         <label for="txtaddphone" class="form-label text-white">Phone Number</label>
-                        <input type="text" class="form-control" id="txtaddphone" placeholder="Phone Number" aria-label="Phone Number">
+                        <input type="text" class="form-control" id="txtaddphone" placeholder="Phone Number"
+                            aria-label="Phone Number">
                     </div>
                     <div class="col-sm-7 mb-3">
                         <label for="txtaddimage" class="form-label text-white">Image</label>
@@ -78,13 +82,37 @@
             <div id="searchstudentcontent" class="subcontent">
                 <h3 class="text-white text-center fw-bold">Search Student form</h3>
             </div>
+            
+            <div class="mb-5">
+                <div class="row">
+                        <table class="table table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th >Stu_Id</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Age</th>
+                                    <th>Grade</th>
+                                    <th>Contact No</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablebody">
+                            </tbody>
 
+
+                        </table>
+                    <div class="col-6">
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-    <script src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

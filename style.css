@@ -28,3 +28,9 @@ body{
 /* .maincontent{
     height: 300px;
 } */
+.modelheadercolour{
+    background-color: #0984e3;
+}
+.modelbodycolour{
+    background-color: #74b9ff;
+}

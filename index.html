@@ -25,6 +25,9 @@
                 onclick="loadcontent('searchstudentcontent')">
         </div>
         <div class="row maincontent my-4">
+
+
+
             <div id="addstudentcontent" class="subcontent mb-4">
                 <h3 class="text-white text-center fw-bold">Add Student Form</h3>
                 <div class="row g-3 mb-3">
@@ -42,11 +45,11 @@
                 <div class="row g-3 mb-3">
                     <div class="col-sm">
                         <label for="txtaddage" class="form-label text-white">Age</label>
-                        <input type="number" class="form-control" placeholder="Age" aria-label="State" id="txtaddage">
+                        <input type="text" class="form-control" placeholder="Age" aria-label="State" id="txtaddage">
                     </div>
                     <div class="col-sm">
                         <label for="txtaddgrade" class="form-label text-white">Grade</label>
-                        <input type="number" class="form-control" placeholder="Grade" aria-label="Zip" id="txtaddgrade">
+                        <input type="text" class="form-control" placeholder="Grade" aria-label="Zip" id="txtaddgrade">
                     </div>
                     <div class="col-sm-7">
                         <label for="txtaddemail" class="form-label text-white">Email</label>
@@ -55,64 +58,328 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-sm">
+                        <label for="txtaddaddress" class="form-label text-white">Permenent Address</label>
+                        <textarea name="studentaddress" id="txtaddaddress" rows="2" class="form-control"
+                            placeholder="Permenent Address"></textarea>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-sm mb-3">
                         <label for="txtaddphone" class="form-label text-white">Phone Number</label>
-                        <input type="text" class="form-control" id="txtaddphone" placeholder="Phone Number"
+                        <input type="text" class="form-control" id="txtaddcontact" placeholder="Phone Number"
                             aria-label="Phone Number">
                     </div>
                     <div class="col-sm-7 mb-3">
                         <label for="txtaddimage" class="form-label text-white">Image</label>
-                        <input class="form-control" type="file" id="formFile" itemid="txtaddimage">
+                        <input class="form-control" type="file" id="txtaddimage" accept="Image/*">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm d-flex justify-content-end">
-                        <input type="button" value="Clear Form" class="p-2 text-white fw-bolder rounded-2 btnclear">
-                        <input type="button" value="Add Student" class="p-2 text-white fw-bolder rounded-2 btnadd">
+                        <input type="button" value="Clear Form" class="p-2 text-white fw-bolder rounded-2 btnclear"
+                            onclick="clearaddform()">
+                        <input type="button" value="Add Student" class="p-2 text-white fw-bolder rounded-2 btnadd"
+                            onclick="addstudent()">
                     </div>
-
                 </div>
             </div>
+
+            <!-- UPDATE STUDENT SECTION  -->
+
             <div id="updatestudentcontent" class="subcontent">
                 <h3 class="text-white text-center fw-bold">Update Student Form</h3>
-            </div>
-            <div id="deletestudentcontent" class="subcontent">
-                <h3 class="text-white text-center fw-bold">Delete Student Form</h3>
-            </div>
-            <div id="searchstudentcontent" class="subcontent">
-                <h3 class="text-white text-center fw-bold">Search Student form</h3>
-            </div>
-            
-            <div class="mb-5">
                 <div class="row">
-                        <table class="table table-dark table-hover">
-                            <thead>
-                                <tr>
-                                    <th >Stu_Id</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
-                                    <th>Age</th>
-                                    <th>Grade</th>
-                                    <th>Contact No</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tablebody">
-                            </tbody>
-
-
-                        </table>
-                    <div class="col-6">
-
+                    <div class="col-sm">
+                        <input type="text" class=" form-control-sm rounded-2 py-2" id="txtupdatesearch" onchange="updatesearch()" placeholder="Search Student By Id">
+                        <input type="button" value="Search" class="btn btn-primary " onclick="updatesearch()">
                     </div>
                 </div>
-
+                <div class="row g-3 mb-3">
+                    <div class="col">
+                        <label for="txtupdatefname" class="form-label text-white">First Name</label>
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                            id="txtupdatefname">
+                    </div>
+                    <div class="col">
+                        <label for="txtupdatelname" class="form-label text-white">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                            id="txtupdatelname">
+                    </div>
+                </div>
+                <div class="row g-3 mb-3">
+                    <div class="col-sm">
+                        <label for="txtupdateage" class="form-label text-white">Age</label>
+                        <input type="text" class="form-control" placeholder="Age" aria-label="State" id="txtupdateage">
+                    </div>
+                    <div class="col-sm">
+                        <label for="txtupdategrade" class="form-label text-white">Grade</label>
+                        <input type="text" class="form-control" placeholder="Grade" aria-label="Zip" id="txtupdategrade">
+                    </div>
+                    <div class="col-sm-7">
+                        <label for="txtupdateemail" class="form-label text-white">Email</label>
+                        <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                            id="txtupdateemail">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="txtupdateaddress" class="form-label text-white">Permenent Address</label>
+                        <textarea name="studentaddress" id="txtupdateaddress" rows="2" class="form-control"
+                            placeholder="Permenent Address"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm mb-3">
+                        <label for="txtupdatecontact" class="form-label text-white mt-3">Phone Number</label>
+                        <input type="text" class="form-control-sm  rounded-2 py-2 d-block" id="txtupdatecontact" placeholder="Phone Number"
+                            aria-label="Phone Number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="txtupdateimage" class="form-label text-white">Current Image</label>
+                        <img src="" alt="" id="updatecurrentstudent" style="height: 100px; width: 100px;">
+                    </div>
+                    <div class="col-sm-9 mb-3">
+                        <label for="txtupdateimage" class="form-label text-white">New Image</label>
+                        <input class="form-control" type="file" id="txtupdateimage" accept="Image/*">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm d-flex justify-content-end">
+                        <!-- <input type="button" value="Clear Form" class="p-2 text-white fw-bolder rounded-2 btnclear"
+                            onclick="clearaddform()"> -->
+                        <input type="button" value="Update Student" class="p-2 text-white fw-bolder rounded-2 btnadd"
+                            onclick="updatestudent()">
+                    </div>
+                </div>
             </div>
         </div>
-        <script src="app.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+        <div id="deletestudentcontent" class="subcontent">
+            <h3 class="text-white text-center fw-bold">Delete Student Form</h3>
+                <div class="row">
+                    <div class="col-sm">
+                        <input type="text" class=" form-control-sm rounded-2 py-2" id="txtdeletesearch" onchange="deletesearch()" placeholder="Search Student By Id">
+                        <input type="button" value="Search" class="btn btn-primary " onclick="deletesearch()">
+                    </div>
+                </div>
+                <div class="row g-3 mb-3">
+                    <div class="col">
+                        <label for="txtdeletefname" class="form-label text-white">First Name</label>
+                        <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                            id="txtdeletefname">
+                    </div>
+                    <div class="col">
+                        <label for="txtdeletelname" class="form-label text-white">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                            id="txtdeletelname">
+                    </div>
+                </div>
+                <div class="row g-3 mb-3">
+                    <div class="col-sm">
+                        <label for="txtdeleteage" class="form-label text-white">Age</label>
+                        <input type="text" class="form-control" placeholder="Age" aria-label="State" id="txtdeleteage">
+                    </div>
+                    <div class="col-sm">
+                        <label for="txtdeletegrade" class="form-label text-white">Grade</label>
+                        <input type="text" class="form-control" placeholder="Grade" aria-label="Zip" id="txtdeletegrade">
+                    </div>
+                    <div class="col-sm-7">
+                        <label for="txtdeleteemail" class="form-label text-white">Email</label>
+                        <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                            id="txtdeleteemail">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="txtdeleteaddress" class="form-label text-white">Permenent Address</label>
+                        <textarea name="studentaddress" id="txtdeleteaddress" rows="2" class="form-control"
+                            placeholder="Permenent Address"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm mb-3">
+                        <label for="txtdeletecontact" class="form-label text-white mt-3">Phone Number</label>
+                        <input type="text" class="form-control-sm  rounded-2 py-2 d-block" id="txtdeletecontact" placeholder="Phone Number"
+                            aria-label="Phone Number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="txtdeleteimage" class="form-label text-white">Current Image</label>
+                        <img src="" alt="" id="deletecurrentstudent" style="height: 100px; width: 100px;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm d-flex justify-content-end">
+                        <!-- <input type="button" value="Clear Form" class="p-2 text-white fw-bolder rounded-2 btnclear"
+                            onclick="clearaddform()"> -->
+                        <input type="button" value="Delete Student" class="p-2 text-white fw-bolder rounded-2 btndelete"
+                            onclick="deletestudent()">
+                    </div>
+                </div>
+        </div>
+        <div id="searchstudentcontent" class="subcontent">
+            <h3 class="text-white text-center fw-bold">Search Student form</h3>
+            <div class="row">
+                <div class="col-sm">
+                    <input type="text" class=" form-control-sm rounded-2 py-2" id="txtsearch" onchange="searchstudent()" placeholder="Search Student By Id">
+                    <input type="button" value="Search" class="btn btn-primary " onclick="searchstudent()">
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mb-2">
+                <img src=" " alt="" id="searchstudentpic" style="width: 150px; height: 150px;">
+            </div>student
+            
+            <div class="row g-3 mb-3">
+                <div class="col">
+                    <label for="searchstudentfname" class="form-label text-white fw-bolder">First Name</label>
+                    <input type="text" class="form-control fw-bold" placeholder="First name"
+                        aria-label="First name" id="searchstudentfname" readonly>
+                </div>
+                <div class="col">
+                    <label for="searchstudentlname" class="form-label text-white fw-bolder">Last Name</label>
+                    <input type="text" class="form-control fw-bold" placeholder="Last name"
+                        aria-label="Last name" id="searchstudentlname" readonly>
+                </div>
+            </div>
+            <div class="row g-3 mb-3">
+                <div class="col-sm">
+                    <label for="searchstudentage" class="form-label text-white fw-bolder">Age</label>
+                    <input type="text" class="form-control fw-bold" placeholder="Age" aria-label="State"
+                        id="searchstudentage">
+                </div>
+                <div class="col-sm">
+                    <label for="searchstudentgrade" class="form-label text-white fw-bolder">Grade</label>
+                    <input type="text" class="form-control fw-bold" placeholder="Grade" aria-label="Zip"
+                        id="searchstudentgrade">
+                </div>
+                <div class="col-sm-7">
+                    <label for="searchstudentemail" class="form-label text-white fw-bolder">Email</label>
+                    <input type="email" class="form-control fw-bold" placeholder="studentEmail"
+                        aria-label="Email" id="searchstudentemail">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm mb-3">
+                    <label for="searchstudentphone" class="form-label text-white fw-bolder">Phone
+                        Number</label>
+                    <input type="text" class="form-control fw-bolder" id="searchstudentphone"
+                        placeholder="Phone Number" aria-label="Phone Number">
+                </div>
+                <div class="col-sm-7 mb-3">
+                    <label for="searchstudentaddress" class="form-label text-white fw-bolder">Permenent
+                        Address</label>
+                    <textarea name="studentaddress" id="searchstudentaddress" rows="2"
+                        class="form-control fw-bold" placeholder="Permenent Address"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content modelheadercolour">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 title" id="exampleModalLabel">Student Details</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modelbodycolour">
+                        <div class="container-fluid">
+                            <div class="row d-flex justify-content-center mb-2">
+                                <img src=" " alt="" id="studentpic" style="width: 150px; height: 150px;">
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <label for="studentid" class="form-label text-black fw-bolder">Student ID:-</label>
+                                    <input type="number" readonly class="form-control fw-bold" id="studentid">
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col">
+                                    <label for="studentfname" class="form-label text-black fw-bolder">First Name</label>
+                                    <input type="text" class="form-control fw-bold" placeholder="First name"
+                                        aria-label="First name" id="studentfname" readonly>
+                                </div>
+                                <div class="col">
+                                    <label for="studentlname" class="form-label text-black fw-bolder">Last Name</label>
+                                    <input type="text" class="form-control fw-bold" placeholder="Last name"
+                                        aria-label="Last name" id="studentlname" readonly>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-3">
+                                <div class="col-sm">
+                                    <label for="studentage" class="form-label text-black fw-bolder">Age</label>
+                                    <input type="text" class="form-control fw-bold" placeholder="Age" aria-label="State"
+                                        id="studentage">
+                                </div>
+                                <div class="col-sm">
+                                    <label for="studentgrade" class="form-label text-black fw-bolder">Grade</label>
+                                    <input type="text" class="form-control fw-bold" placeholder="Grade" aria-label="Zip"
+                                        id="studentgrade">
+                                </div>
+                                <div class="col-sm-7">
+                                    <label for="studentemail" class="form-label text-black fw-bolder">Email</label>
+                                    <input type="email" class="form-control fw-bold" placeholder="Email"
+                                        aria-label="Email" id="studentemail">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm mb-3">
+                                    <label for="studentphone" class="form-label text-black fw-bolder">Phone
+                                        Number</label>
+                                    <input type="text" class="form-control fw-bolder" id="studentphone"
+                                        placeholder="Phone Number" aria-label="Phone Number">
+                                </div>
+                                <div class="col-sm-7 mb-3">
+                                    <label for="studentaddress" class="form-label text-black fw-bolder">Permenent
+                                        Address</label>
+                                    <textarea name="studentaddress" id="studentaddress" rows="2"
+                                        class="form-control fw-bold" placeholder="Permenent Address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <div class="row">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>Stu_Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Grade</th>
+                            <th>Contact No</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                    </tbody>
+
+
+                </table>
+                <div class="col-6">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

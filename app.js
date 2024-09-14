@@ -68,7 +68,10 @@ function addstudent() {
 
     fetch("http://localhost:8080/student/addstudent", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
+        .then(result => {
+            console.log(result)
+            loadtable();
+        })
         .catch(error => console.error('Error:', error));
 }
 

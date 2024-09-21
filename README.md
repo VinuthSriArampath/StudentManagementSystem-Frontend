@@ -1,6 +1,6 @@
 # Student Management System Frontend
 
-A simple webpage(GUI) made to interact with the "Student Management System" REST-API which allows the user the to send POST,GET,DELETE,PATCH requests.
+A simple webpage(GUI) made to interact with the "Student Management System" REST-API which allows the user the to send POST,GET,DELETE,PATCH requests Using HTML,CSS,JAVASCRIPT
 
 ## Table of Contents
 

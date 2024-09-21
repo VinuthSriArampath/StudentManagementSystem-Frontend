@@ -6,12 +6,7 @@ A simple webpage(GUI) made to interact with the "Student Management System" REST
 
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Screenshots](#screenshots)
-- [API Documentation](#api-documentation) *(if applicable)*
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
 
 ## Features
 
@@ -35,7 +30,17 @@ A simple webpage(GUI) made to interact with the "Student Management System" REST
       ```
 
 ## Screenshots
+- Basic Screen Page
+![Basic Screen Page](https://github.com/VinuthSriArampath/StudentManagementSystem-Frontend/blob/31cd968f20e7169160829b5506bb76085c8b6446/Screenshots/Basic_Starter_Page.png)
 
-![Screenshot 1]()
-![Screenshot 2](path/to/screenshot2.png)
+- Page After Adding Student
+![Page After Adding Student](https://github.com/VinuthSriArampath/StudentManagementSystem-Frontend/blob/31cd968f20e7169160829b5506bb76085c8b6446/Screenshots/Page_After_Adding_Student.png)
 
+- Page After Updating Student
+![Page After Updating Student](https://github.com/VinuthSriArampath/StudentManagementSystem-Frontend/blob/31cd968f20e7169160829b5506bb76085c8b6446/Screenshots/page_after_updating_student.png)
+
+- Page After Deleting Student
+![Page After Deleting Student](https://github.com/VinuthSriArampath/StudentManagementSystem-Frontend/blob/31cd968f20e7169160829b5506bb76085c8b6446/Screenshots/page-after-deleting-student.png)
+
+- Search student page
+![Search student page](https://github.com/VinuthSriArampath/StudentManagementSystem-Frontend/blob/31cd968f20e7169160829b5506bb76085c8b6446/Screenshots/search-student-page.png)
